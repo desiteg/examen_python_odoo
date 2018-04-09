@@ -1,7 +1,7 @@
 
 ## Examen Odoo
 
-### [Fecha del Examen]
+### [09 de Abril de 2018]
 
 1. CREAR UNA CUENTA DE GITHUB / Si ya tienes una, omitir este paso.
 
