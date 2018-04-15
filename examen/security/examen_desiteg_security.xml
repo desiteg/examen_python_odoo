@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="examen_desiteg">
+                <field name="name">Examen Desiteg</field>
+                <field name="description">Examen Desiteg</field>
+                <field name="sequence">1</field>
+        </record>
+        <record id="examen_group_admin" model="res.groups">
+            <field name="name">Admin</field>
+            <field name="category_id" ref="examen_desiteg"/>
+        </record>
+        <record id="examen_group_user" model="res.groups">
+            <field name="name">Usuario</field>
+            <field name="category_id" ref="examen_desiteg"/>
+        </record>  
+    </data>
+</odoo>
+
