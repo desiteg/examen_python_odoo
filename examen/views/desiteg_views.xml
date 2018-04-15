@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+        <menuitem id="desiteg_menu_root" name="Equipos de Computo" groups="examen_group_admin,examen_group_user" sequence="1"/>
+
+        <menuitem id="menu_desiteg_cat"
+            name="Catálogos"
+            parent="desiteg_menu_root"
+            groups="examen_group_admin,examen_group_user"
+            sequence="2"/>
+
+       <record id="view_desiteg_so_tree" model="ir.ui.view">
+            <field name="name">desiteg.so.tree</field>
+            <field name="model">sistemas.operativos</field>
+            <field name="arch" type="xml">
+                <tree string="Sistemas Operativos">
+                    <field name="nombre_sistema"/>
+                    <field name="version"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_desiteg_so_form">
+            <field name="name">desiteg.so.form</field>
+            <field name="model">sistemas.operativos</field>
+            <field name="arch" type="xml">
+              <form string="Sistemas Operativos"> 
+                <sheet>
+                  <div class="oe_title">
+                      <h1><label string="Sistemas Operativos"/></h1>
+                  </div>
+                  <group name="group_top" col="2">
+                      <field name="nombre_sistema"/>
+                      <field name="version"/>
+                  </group>
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+        <act_window id="action_desiteg_so" name="Sistemas Operativos" res_model="sistemas.operativos" view_mode="tree,form" />
+        
+        <menuitem id="menu_desiteg_so"
+            name="Sistemas Operativos"
+            parent="menu_desiteg_cat"
+            action="action_desiteg_so"
+            groups="examen_group_admin,examen_group_user"/>
+
+        <record id="view_desiteg_te_tree" model="ir.ui.view">
+            <field name="name">desiteg.te.tree</field>
+            <field name="model">tipo.equipos</field>
+            <field name="arch" type="xml">
+                <tree string="Tipo de Equipos">
+                    <field name="tipo_equipo"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_desiteg_te_form">
+            <field name="name">desiteg.te.form</field>
+            <field name="model">tipo.equipos</field>
+            <field name="arch" type="xml">
+              <form string="Tipos de Equipos"> 
+                <sheet>
+                  <div class="oe_title">
+                    <h1><label string="Tipos de Equipos"/></h1>
+                  </div>
+                  <group name="group_top" col='2'>
+                      <field name="tipo_equipo"/>
+                  </group>
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+        <act_window id="action_desiteg_te" name="Tipos de Equipo" res_model="tipo.equipos" view_mode="tree,form"/>
+        <menuitem id="menu_desiteg_te"
+            name="Tipos de Equipo"
+            parent="menu_desiteg_cat"
+            action="action_desiteg_te"
+            groups="examen_group_admin,examen_group_user"/>
+
+        <record id="view_desiteg_device_tree" model="ir.ui.view">
+            <field name="name">desiteg.device.tree</field>
+            <field name="model">equipos.computo</field>
+            <field name="arch" type="xml">
+                <tree string="Equipos de Computo">
+                    <field name="nombre_equipo"/>
+                    <field name="marca"/>
+                    <field name="tipo_equipo_id"/>
+                    <field name="sistema_operativo_id"/>
+                    <field name="memoria_ram"/>
+                    <field name="capacidad_disco_duro"/>
+                    <field name="numero_de_serie"/>
+                    <field name="usuario_asignado_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_desiteg_device_form">
+            <field name="name">desiteg.device.form</field>
+            <field name="model">equipos.computo</field>
+            <field name="arch" type="xml">
+              <form string="Equipos de Computo"> 
+                <sheet>
+                  <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;, &quot;size&quot;: [90, 90]}"/> 
+                  <group name="group_left" col='4'>
+                      <field name="nombre_equipo"/>
+                      <field name="marca"/>
+                      <field name="tipo_equipo_id"/>
+                      <field name="sistema_operativo_id"/>
+                      <field name="memoria_ram"/>
+                      <field name="capacidad_disco_duro"/>
+                      <field name="numero_de_serie"/>
+                      <field name="usuario_asignado_id"/>
+                  </group> 
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+        <act_window id="action_desiteg_device" name="Equipos" res_model="equipos.computo" view_mode="tree,form"/>
+        <menuitem id="menu_desiteg_device" name="Equipos" parent="desiteg_menu_root" action="action_desiteg_device" groups="examen_group_admin,examen_group_user"/>
+        
+        <record id="view_res_users_form_inherited" model="ir.ui.view">
+              <field name="name">res.users.form</field>
+              <field name="model">res.users</field>
+              <field name="inherit_id" ref="base.view_users_form"/>
+              <field name="arch" type="xml">
+                <notebook position="inside">
+                  <page string="Equipos Asignados">
+                    <group name="group_top">
+                          <field name="numero_equipos_asignados"/>
+                    </group>
+                    <group name="group_left">
+                      <field name="equipos_asignados_id"/>
+                    </group>
+                 </page>
+                </notebook>
+              </field>
+        </record>       
+  </data>
+</odoo>

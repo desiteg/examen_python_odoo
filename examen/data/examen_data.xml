@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--
+            4 tipos de equipos
+        -->
+        
+        <record id="tipo_equipos_one" model="tipo.equipos">
+            <field name="tipo_equipo">PC</field>
+        </record>
+
+        <record id="tipo_equipos_two" model="tipo.equipos">
+            <field name="tipo_equipo">LAPTOP</field>
+        </record>
+
+        <record id="tipo_equipos_three" model="tipo.equipos">
+            <field name="tipo_equipo">CELULAR</field>
+        </record>
+
+        <record id="tipo_equipos_four" model="tipo.equipos">
+            <field name="tipo_equipo">TABLET</field>
+        </record>
+
+        <!--
+            5 Usuarios
+        -->
+
+        <record id="res_users_one" model="res.users">
+            <field name="active">True</field>
+            <field name="name">Jose Perez</field>
+            <field name="login">jperez@example.com</field>
+            <field name="company_id">1</field>
+        </record>
+
+        <record id="res_users_two" model="res.users">
+            <field name="active">True</field>
+            <field name="name">Pedro Martinez</field>
+            <field name="login">pmartinez@example.com</field>
+            <field name="company_id">1</field>
+        </record>
+        
+        <record id="res_users_three" model="res.users">
+            <field name="active">True</field>
+            <field name="name">Maria Lopez</field>
+            <field name="login">mlopez@example.com</field>
+            <field name="company_id">1</field>
+        </record>
+
+        <record id="res_users_four" model="res.users">
+            <field name="active">True</field>
+            <field name="name">Juan Leal</field>
+            <field name="login">jleal@example.com</field>
+            <field name="company_id">1</field>
+        </record>
+
+        <record id="res_users_five" model="res.users">
+            <field name="active">True</field>
+            <field name="name">Noe Torres</field>
+            <field name="login">ntorres@example.com</field>
+            <field name="company_id">1</field>
+        </record>
+        
+        <!--
+            3 Sistemas Operativos
+        -->
+        
+        <record id="sistemas_operativos_one" model="sistemas.operativos">
+            <field name="nombre_sistema">Windows</field>
+            <field name="version">10</field>
+        </record>
+        
+        <record id="sistemas_operativos_two" model="sistemas.operativos">
+            <field name="nombre_sistema">Ubuntu</field>
+            <field name="version">16.04.4 LTS</field>
+        </record>
+
+        <record id="sistemas_operativos_three" model="sistemas.operativos">
+            <field name="nombre_sistema">Android Lollipop </field>
+            <field name="version">5.0–5.1.1</field>
+        </record>
+
+        <!--
+            10 equipos
+        -->
+        
+        <record id="equipos_computo_one" model="equipos.computo">
+            <field name="nombre_equipo">Computadora de Escritorio</field>
+            <field name="marca">LENOVO</field>
+            <field name="tipo_equipo_id">1</field>
+            <field name="sistema_operativo_id">1</field>
+            <field name="memoria_ram">16 Gb</field>
+            <field name="capacidad_disco_duro">3 Tb</field>
+            <field name="numero_de_serie">1234567</field>
+            <field name="usuario_asignado_id">1</field>
+        </record>
+
+        <record id="equipos_computo_two" model="equipos.computo">
+            <field name="nombre_equipo">Computadora Portátil</field>
+            <field name="marca">DELL</field>
+            <field name="tipo_equipo_id">2</field>
+            <field name="sistema_operativo_id">2</field>
+            <field name="memoria_ram">16 Gb</field>
+            <field name="capacidad_disco_duro">3 Tb</field>
+            <field name="numero_de_serie">09876534</field>
+            <field name="usuario_asignado_id">5</field>
+        </record>
+
+        <record id="equipos_computo_three" model="equipos.computo">
+            <field name="nombre_equipo">Netbook</field>
+            <field name="marca">ASUS</field>
+            <field name="tipo_equipo_id">3</field>
+            <field name="sistema_operativo_id">3</field>
+            <field name="memoria_ram">4 Gb</field>
+            <field name="capacidad_disco_duro">1 Gb</field>
+            <field name="numero_de_serie">135246</field>
+            <field name="usuario_asignado_id">6</field>
+        </record>
+
+        <record id="equipos_computo_four" model="equipos.computo">
+            <field name="nombre_equipo">PDA</field>
+            <field name="marca">BLU</field>
+            <field name="tipo_equipo_id">4</field>
+            <field name="sistema_operativo_id">3</field>
+            <field name="memoria_ram">4 Gb</field>
+            <field name="capacidad_disco_duro">1 Gb</field>
+            <field name="numero_de_serie">07968536</field>
+            <field name="usuario_asignado_id">7</field>
+        </record>
+
+        <record id="equipos_computo_five" model="equipos.computo">
+            <field name="nombre_equipo">Tableta</field>
+            <field name="marca">Sansumg</field>
+            <field name="tipo_equipo_id">4</field>
+            <field name="sistema_operativo_id">3</field>
+            <field name="memoria_ram">2 Gb</field>
+            <field name="capacidad_disco_duro">1 Gb</field>
+            <field name="numero_de_serie">612849</field>
+            <field name="usuario_asignado_id">8</field>
+        </record>
+
+        <record id="equipos_computo_six" model="equipos.computo">
+            <field name="nombre_equipo">Computadora de Escritorio</field>
+            <field name="marca">DELL</field>
+            <field name="tipo_equipo_id">1</field>
+            <field name="sistema_operativo_id">1</field>
+            <field name="memoria_ram">8 Gb</field>
+            <field name="capacidad_disco_duro">1 Tb</field>
+            <field name="numero_de_serie">9250168</field>
+            <field name="usuario_asignado_id">9</field>
+        </record>
+
+        <record id="equipos_computo_seven" model="equipos.computo">
+            <field name="nombre_equipo">Computadora Portátil</field>
+            <field name="marca">hp</field>
+            <field name="tipo_equipo_id">2</field>
+            <field name="sistema_operativo_id">1</field>
+            <field name="memoria_ram">4 Gb</field>
+            <field name="capacidad_disco_duro">500 Gb</field>
+            <field name="numero_de_serie">83940158</field>
+            <field name="usuario_asignado_id">1</field>
+        </record>
+
+        <record id="equipos_computo_eight" model="equipos.computo">
+            <field name="nombre_equipo">Netbook</field>
+            <field name="marca">ASUS</field>
+            <field name="tipo_equipo_id">2</field>
+            <field name="sistema_operativo_id">3</field>
+            <field name="memoria_ram">2 Gb</field>
+            <field name="capacidad_disco_duro">1 Gb</field>
+            <field name="numero_de_serie">92837401</field>
+            <field name="usuario_asignado_id">5</field>
+        </record>
+
+        <record id="equipos_computo_nine" model="equipos.computo">
+            <field name="nombre_equipo">PDA</field>
+            <field name="marca">SAMSUNG</field>
+            <field name="tipo_equipo_id">3</field>
+            <field name="sistema_operativo_id">3</field>
+            <field name="memoria_ram">1 Gb</field>
+            <field name="capacidad_disco_duro">2 Gb</field>
+            <field name="numero_de_serie">09080703</field>
+            <field name="usuario_asignado_id">6</field>
+        </record>
+
+        <record id="equipos_computo_ten" model="equipos.computo">
+            <field name="nombre_equipo">Tableta</field>
+            <field name="marca">Sansumg</field>
+            <field name="tipo_equipo_id">4</field>
+            <field name="sistema_operativo_id">3</field>
+            <field name="memoria_ram">1 Gb</field>
+            <field name="capacidad_disco_duro">2 Gb</field>
+            <field name="numero_de_serie">41364879</field>
+            <field name="usuario_asignado_id">7</field>
+        </record>
+
+    </data>
+</odoo>

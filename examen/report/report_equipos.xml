@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report 
+            id="action_report_device" 
+            string="Imprimir Lista de Equipos" 
+            model="res.users" 
+            report_type="qweb-pdf"
+            file="examen.device_template" 
+            name="examen.device_template" 
+            attachment_use="True"
+            attachment="(object.active == 'True') and
+                ('NOT-'+(object.name or '').replace('/','')+'.pdf')"
+            menu="True"/>
+    </data>
+</odoo>

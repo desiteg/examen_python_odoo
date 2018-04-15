@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tipo_equipos_admin,tipo.equipos.admin,model_tipo_equipos,examen.examen_group_admin,1,1,1,0
+access_sistemas_operativos_admin,sistemas.operativos.admin,model_sistemas_operativos,examen.examen_group_admin,1,1,1,0
+access_equipos_computo_admin,equipos.computo.admin,model_equipos_computo,examen.examen_group_admin,1,0,0,0
+,,,,,,,
+access_tipo_equipos_user,tipo.equipos.user,model_tipo_equipos,examen.examen_group_user,1,0,0,0
+access_sistemas_operativos_user,sistemas.operativos.user,model_sistemas_operativos,examen.examen_group_user,1,0,0,0
+access_equipos_computo_user,equipos.computo.user,model_equipos_computo,examen.examen_group_user,1,1,1,0

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="device_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.internal_layout">    
+                    <div class="page">
+                        <h3 class="text-center"><span t-field="o.name"/> tiene <span t-field="o.numero_equipos_asignados"/> equipos asignados</h3>
+                        <table class="table table-bordered mt32">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Nombre del Equipo</th>
+                                    <th class="text-center">Marca</th>
+                                    <th class="text-center">Tipo de Equipo</th>
+                                    <th class="text-center">Sistema Operativo</th>
+                                    <th class="text-center">Memoria RAM</th>
+                                    <th class="text-center">Capacidad de Disco Duro</th>
+                                    <th class="text-center">Numero de Serie</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center" t-foreach="o.equipos_asignados_id" t-as="supply">
+                                    <td><span t-field="supply.nombre_equipo"/></td>
+                                    <td><span t-field="supply.marca"/></td>                           
+                                    <td><span t-field="supply.tipo_equipo_id.tipo_equipo"/></td>
+                                    <td><span t-field="supply.sistema_operativo_id.nombre_sistema"/></td>
+                                    <td><span t-field="supply.memoria_ram"/></td>
+                                    <td><span t-field="supply.capacidad_disco_duro"/></td>
+                                    <td><span t-field="supply.numero_de_serie"/></td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
